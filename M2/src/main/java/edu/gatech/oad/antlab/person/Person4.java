@@ -31,7 +31,12 @@ public class Person4 {
      */
     private String calc(String input) {
       //Person 4 put your implementation here
-      return null;
+      char[] ascii_values = input.toCharArray();
+      String returnVal = "";
+      for(char ascii : ascii_values) {
+        returnVal += String.valueOf(Character.toChars((int) ascii + 1));
+      }
+      return returnVal;
     }
     
     /**
