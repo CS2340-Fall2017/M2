@@ -1,0 +1,84 @@
+﻿As a user, I want to be able to report rat sightings in my location, so that there can be a database with reports of sightings. 
+
+
+As a user, I want to be able to search about information on rat sightings, so that i can be properly informed on the locations of rats in New York City. 
+
+
+As a user, I want to have access to a map marking rat sightings, so that I can see a visual representation of rat populations in New York City. 
+
+
+As a user, I want to be able to log into the application so that I can have appropriate access to rat sighting information and rat reporting forms. 
+
+
+As an administrator, I want to be able to add user accounts such that they can use the application without having to create an account themselves.
+
+
+As an administrator, I want to be able to delete user accounts such that I can override all accounts and only keep wanted accounts on the system. 
+
+
+As an administrator, I want to be able to unlock accounts so that only verified users can log back into their accounts if they forgot their credentials. 
+
+
+As an administrator, I want to be able to assign users their appropriate user category so that they can have appropriate rights granted. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cesar 
+“As an administrator, I want to be able to assign users their appropriate user category so that they can have appropriate rights granted.”
+
+
+Tasks:
+-create UserRank enum 
+-add UserRank attribute to the User class
+-In Model class, specify rights granted based on UserRank
+-add spinner widget allowing admin to specify UserRank
+- make changes to controller class to reflect updates
+
+
+Acceptance Scenarios:
+-GIVEN an administrator is on the create a user page WHEN the administrator adds user name, valid login information and assigns user rank THEN the new user is added to the model and overall list of users, and is given appropriate access rights based on rank
+-GIVEN an administrator is on the edit a user page WHEN the administrator assigns/edits the user’s rank THEN the change in rank is reflected in that user’s object instance and the user is given appropriate access rights based on rank
+-GIVEN an administrator is on the edit user page WHEN the cancel button is pressed THEN changes will not be reflected in the model 
+-GIVEN an administrator is on the create or edit user pages WHEN an invalid input is received for name, log in information or user rank THEN the system shows an error indicating invalid inputs and reason while disregarding input given 
+
+
+Done Done Criteria:
+-Unit Tests are created, ran, and passed in order to ensure proper functionality of user rank assignment 
+-Code is merged into master branch
